@@ -46,7 +46,20 @@
   (with-syntax-table clojure-mode-with-hyphens-as-word-sep-syntax-table
     (transpose-words arg)))
 
+(defun define-function ()
+  (interactive)
+  (let ((name (symbol-at-point)))
+    (backward-paragraph)
+    (insert "\n(defn " (symbol-name name) "\n [])\n" )
+    (backward-char 3)))
+
+(defun jsj-clojure-example (name)
+  (interactive "sFunction (ex. clojure.set/join): ")
+  (browse-url (concat "http://clojuredocs.org/clojure_core/" name "#examples")))
+
 (define-key clojure-mode-map (kbd "M-t") 'transpose-words-with-hyphens)
+(define-key clojure-mode-map (kbd "C-c f") 'define-function)
+(define-key clojure-mode-map (kbd "C-c d") 'jsj-clojure-example)
 
 (setq auto-mode-alist (append '(("\\.cljs$" . clojure-mode))
                               auto-mode-alist))

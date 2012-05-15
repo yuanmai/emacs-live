@@ -2,6 +2,9 @@
 (require 'slime)
 (slime-setup '(slime-repl slime-scratch slime-editing-commands))
 (setq slime-protocol-version 'ignore)
+
+(define-key slime-mode-map (kbd "C-j") 'slime-eval-print-last-expression)
+
 (add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
 
 (add-hook 'slime-repl-mode-hook (lambda ()
