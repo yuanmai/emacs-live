@@ -1,5 +1,7 @@
 (live-add-pack-lib "slime")
 (require 'slime)
+(require 'clj-imports)
+(require 'clj-method-complete)
 (slime-setup '(slime-repl slime-scratch slime-editing-commands))
 (setq slime-protocol-version 'ignore)
 
