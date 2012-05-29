@@ -21,6 +21,7 @@
                                   (modify-syntax-entry ?\[ "(]")
                                   (modify-syntax-entry ?\] ")[")))
 
+
 ;;why isn't this working?
 ;; (eval-after-load 'slime-repl-mode
 ;;   '(add-to-list (make-local-variable 'paredit-space-for-delimiter-predicates)
