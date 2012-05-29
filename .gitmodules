@@ -43,3 +43,6 @@
 [submodule "packs/dev/clojure-pack/vendor/submodules/expectations-mode"]
 	path = packs/dev/clojure-pack/vendor/submodules/expectations-mode
 	url = git://github.com/gar3thjon3s/expectations-mode.git
+[submodule "packs/dev/power-pack/vendor/submodules/helm"]
+	path = packs/dev/power-pack/vendor/submodules/helm
+	url = git://github.com/emacs-helm/helm.git
