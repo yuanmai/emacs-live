@@ -107,8 +107,3 @@
 ;; " (live-welcome-message) "
 
 ") )
-
-(custom-set-faces
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "light gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 145 :width normal :foundry "apple" :family "Monaco"))))
- '(popup-tip-face ((t (:background "#333333" :foreground "white")))))
