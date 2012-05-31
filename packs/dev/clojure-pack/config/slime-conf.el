@@ -21,6 +21,15 @@
                                   (modify-syntax-entry ?\[ "(]")
                                   (modify-syntax-entry ?\] ")[")))
 
+(defun clojure-reset-namespace ()
+  "Reloads the current Clojure namespace by first removing it and
+then re-evaluating the slime buffer. Use this to remove old
+symbol definitions and reset the namespace to contain only what
+is defined in your current Emacs buffer."
+  (interactive)
+  (save-buffer)
+  (slime-interactive-eval (concat "(remove-ns '" (slime-current-package) ")"))
+  (slime-compile-and-load-file))
 
 ;;why isn't this working?
 ;; (eval-after-load 'slime-repl-mode
